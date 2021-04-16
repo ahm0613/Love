@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viet" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  
+  <title>Love</title>
+</head>
+<body>
+  <div id="app">
+    <div id="div"></div>
+    <div id="output">
+      <p id="outputP">&nbsp;</p>
+    </div>
+    <button v-if="!inputShow" id="inputBack" v-on:click="inputBack"><i class="fa fa-undo" aria-hidden="true"></i></button>
+    <div id="input">
+      <input id="inputText" type="text" v-on:keyup.enter="textUpload" v-model='myText' v-if="!optionShow">
+      <div id="optionButton" v-on:click="optionButton"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <p id="textData" v-if="!optionShow"><span id="span" v-on:click="spanUpload" v-model="myText"></span></p>
+      <div id="addOption" v-if="optionShow"><p id="inputP">option</p>
+        <div id="colorData" :style="{backgroundColor:colorD}">
+          <input id="colorDataInput" type="color" v-model="colorD">
+          <input id="colorInput" type="text" v-model="colorD" placeholder="#000000">
+        </div>
+        <div id="numberData">움직이는 속도<br>
+          <input id="numberInput" type="text" placeholder="1000 = 1초" v-model="numberD">
+          <p id="numberP"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./assets/js/Love_v2.0.0.js"></script>
+  <script type="text/javascript" src="./assets/js/miniLove.js"></script>
+</body>
+</html>
