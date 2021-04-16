@@ -10,6 +10,7 @@ body {
   font-size: 150px;
   z-index: 15;
   color: #f74fbd;
+  white-space:nowrap;
 }
 #output {
   position: absolute;
