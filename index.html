@@ -20,7 +20,7 @@
     <div id="input">
       <input id="inputText" type="text" v-on:keyup.enter="textUpload" v-model='myText' v-if="!optionShow">
       <div id="optionButton" v-on:click="optionButton"><i class="fa fa-plus" aria-hidden="true"></i></div>
-      <p id="textData" v-if="!optionShow"><span id="span" v-on:click="spanUpload" v-model="myText"></span></p>
+      <p id="textData" v-if="!optionShow"><span id="span" v-on:click="textUpload" v-model="myText"></span></p>
       <div id="addOption" v-if="optionShow"><p id="inputP">option</p>
         <div id="colorData" :style="{backgroundColor:colorD}">
           <input id="colorDataInput" type="color" v-model="colorD">
